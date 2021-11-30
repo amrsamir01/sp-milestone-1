@@ -11,7 +11,8 @@ export class accountService {
    * Returns all users from mongo database
    */
   findAll(): Promise<Account[]> {
-    return this.accountModel.find().exec();}
+    return this.accountModel.find().exec();
+  }
     
 
     getAll(req:any)

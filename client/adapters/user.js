@@ -7,6 +7,12 @@ export function useFetchUser(userId) {
   );
 }
 
+export function useFetchAccounts() {
+  return useQuery("accounts", () =>
+    apiService.get(`user/list`).then(({ data }) => data)
+  );
+}
+
 export function useMutateLoginUser() {
   return useMutation(
     (user) => {
@@ -42,6 +48,8 @@ export function useMutateRegisterUser() {
     }
   );
 }
+
+
 
 export function useMutateUpdateUser(userId) {
   const queryClint = useQueryClient();
