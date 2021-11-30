@@ -13,4 +13,9 @@ export class UserService {
   findAll(): Promise<User[]> {
     return this.userModel.find().exec();
   }
+
+  createUser(dto: User): any{
+    return this.userModel.create();
+    
+  }
 }
