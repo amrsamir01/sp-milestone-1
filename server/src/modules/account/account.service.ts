@@ -14,8 +14,8 @@ export class accountService {
     return this.accountModel.find().exec();}
     
 
-getAll(req:any)
-{
-
-}
+    getAll(req:any)
+    {
+      return this.accountModel.find().exec();
+    }
 }
