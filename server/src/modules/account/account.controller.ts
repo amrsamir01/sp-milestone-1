@@ -6,12 +6,13 @@ import { accountService } from './account.service';
 export class AccountController {
   constructor(private accountService: accountService) {}
   
-  @UseGuards(AuthGuard('jwt'))
-  @Get('list')
+  // @UseGuards(AuthGuard('jwt'))
+  @Get('lists')
   users(): any {
     return this.accountService.findAll();}
-    @Get()
-    getAccouts(@Headers() req:any){
-      return this.accountService.getAll(req);
+    
+  @Get()
+  getAccouts(@Headers() req:any){
+    return this.accountService.getAll(req);
     }  
 }

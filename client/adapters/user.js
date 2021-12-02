@@ -9,7 +9,7 @@ export function useFetchUser(userId) {
 
 export function useFetchAccounts() {
   return useQuery("accounts", () =>
-    apiService.get(`user/list`).then(({ data }) => data)
+    apiService.get(`users/list`).then(({ data }) => data)
   );
 }
 
