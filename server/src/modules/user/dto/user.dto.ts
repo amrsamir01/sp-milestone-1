@@ -20,5 +20,5 @@ export class User {
     phone: number;
   
     @Prop({ required: true })
-    GIU_id: number;
+    id: number;
 }
