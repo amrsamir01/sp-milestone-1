@@ -13,10 +13,8 @@ export class Account {
   
   @Prop({ required: true })
   accountid: string;
-  @Prop({ required: true })
-  acc_num: number;
-
-  @Prop({ required: true })
+  
+ @Prop({ required: true })
   balance: number;
 
 
