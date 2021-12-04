@@ -36,6 +36,7 @@ export class UserService {
       throw new HttpException('user already exist', HttpStatus.BAD_REQUEST);
     }
     const createUser = new this.userModel(userDto);
+    createUser.balance = 100;
     await createUser.save();
     return this.sanitizedUser(createUser);
     //add the users to database
